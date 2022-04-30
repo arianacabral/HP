@@ -1,0 +1,53 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	animation: gradient 10s ease infinite;
+	background: linear-gradient(-45deg, #ffc100, #ff9a00, #EE7752, #b965ef, #23A6D5, #23D5AB);
+	background-size: 300% 300%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0 50%;
+	}
+}
+
+.canvas {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 80vmin;
+	height: 80vmin;
+}
+
+.deathly-hallows-triangle{
+    position: absolute;
+    transform: rotate(180deg) translateX(20px);
+}
+
+.triangle,
+.circle,
+.line{
+    fill :transparent;
+    stroke: white;
+    stroke-width: 5;
+}
