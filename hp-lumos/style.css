@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+	--white:#f1f1f1;
+    --back: #212121;
+}
+
+body {
+	margin: 0;
+	font-family: Helvetica;
+	font-size: 40px;
+	color: var(--white);
+	letter-spacing: 0.7em;
+	background-color: var(--back);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.circle {
+    position: absolute;
+	width: 25vmin;
+	height: 25vmin;
+	top: 30vmin;
+	left: 78vmin;
+    background-color: rgba(255, 255, 255, 0.484);
+    opacity: 0.4;
+	border-radius: 50%;
+    box-shadow: 0 0 100px 0px #d8dbbfed, 0 0 100px 0 var(--white);
+    animation: blink 3s linear reverse infinite;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0.4;
+	}
+	7% {
+		opacity: 0.5;
+	}
+	12% {
+		opacity: 0.6;
+	}
+	17% {
+		opacity: 0.85;
+	}
+	27% {
+		opacity: 0.5;
+	}
+	32% {
+		opacity: 1;
+	}
+	35% {
+		opacity: 0.1;
+	}
+	42% {
+		opacity: 0.25;
+	}
+	47% {
+		opacity: 0.5;
+	}
+	62% {
+		opacity: 1;
+	}
+	72% {
+		opacity: 0.85;
+	}
+	82% {
+		opacity: 0.4;
+	}
+	92% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+div > span {
+	opacity: 0.15;
+}
