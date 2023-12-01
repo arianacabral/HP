@@ -24,62 +24,58 @@ body {
 
 .circle {
     position: absolute;
-	width: 25vmin;
-	height: 25vmin;
-	top: 30vmin;
-	left: 78vmin;
-    background-color: rgba(255, 255, 255, 0.484);
+	width: 100px;
+	height: 100px;
+	filter: blur(5), brightness(5);
+
+    background-color: rgba(255, 255, 255, 1);
     opacity: 0.4;
 	border-radius: 50%;
-    box-shadow: 0 0 100px 0px #d8dbbfed, 0 0 100px 0 var(--white);
-    animation: blink 3s linear reverse infinite;
+    box-shadow: 0 0 100px 0px rgb(255, 220, 159), 0 0 100px 0 var(--white);
+    animation: blink 8s linear reverse infinite;
 }
 
 @keyframes blink {
 	0% {
-		opacity: 0.4;
+		scale: 0.5;
+		opacity: 0;
+	background-color: rgba(255, 255, 255, 0.8);
 	}
-	7% {
+	25% {
 		opacity: 0.5;
+	background-color: rgba(255, 255, 255, 0.5);
 	}
-	12% {
-		opacity: 0.6;
+	40%{
+		scale:1;
 	}
-	17% {
-		opacity: 0.85;
-	}
-	27% {
-		opacity: 0.5;
-	}
-	32% {
+	50% {
+		scale: 1.1;
 		opacity: 1;
+	background-color: rgba(255, 255, 255, 1);
 	}
-	35% {
-		opacity: 0.1;
-	}
-	42% {
-		opacity: 0.25;
-	}
-	47% {
-		opacity: 0.5;
-	}
-	62% {
+	75% {
 		opacity: 1;
+	background-color: rgba(255, 255, 255, 1);
 	}
-	72% {
-		opacity: 0.85;
-	}
-	82% {
-		opacity: 0.4;
-	}
-	92% {
-		opacity: 0.5;
-	}
+
 	100% {
-		opacity: 1;
+		opacity: 0;
+	background-color: rgba(255, 255, 255, 0.8);
 	}
+	
+}
+@media (max-width: 1250px) {
+	
+	
+}
+@font-face {
+	font-family: harry;
+	src: url("./hp.TTF");
 }
 
-div > span {
-	opacity: 0.15;
+.canvas{
+	font-family: harry;
+	opacity: 0.4;
+	margin-bottom: 50px;
+	padding-left: 25px;
 }
